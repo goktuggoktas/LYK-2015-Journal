@@ -1,0 +1,22 @@
+<% @posts.each do |post| %>
+<div class="post_wrapper">
+  <h4 class="title"><strong><%= link_to post.title ,post%></strong></h4>
+  <div style="padding: 15px 0px 0px 50px;">
+    <div class="img-circle">
+        <%= image_tag post.avatar.url(:thumb) , class: "circle"%>
+    </div>
+    <div class="body">
+      <% if post.body.length > 250 %>
+          <%= truncate(post.body, length: 250) %>
+          <a><%= link_to 'Read more', post_path(post) %></a>
+
+      <% else %>
+          <%= post.body %>
+
+      <% end %>
+
+    </div>
+  </div>
+  <p class="date"><%=  post.created_at.strftime(" %d, %B, %Y ") %>
+</div>
+<% end  %>

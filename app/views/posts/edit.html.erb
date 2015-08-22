@@ -1,0 +1,25 @@
+<div id="page_wrapper">
+  <h1>Edit Post</h1>
+  <%= form_for @post,:url => post_path, method: :put, :html => { :multipart => true } do |f| %>
+      <% if @post.errors.any? %>
+          <div id="errors"><h2><%= pluralize(@post.errors.count, 'Error') %></h2>
+            <ul>
+              <% @post.errors.full_messages.each do|msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <p>
+        <%= f.label :title%><br>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.label :body  %><br>
+        <%= f.text_area :body %>
+      </p>
+      <p><%= f.file_field :avatar %></p>
+      <p> <%= f.submit %></p>
+  <% end  %>
+
+</div>

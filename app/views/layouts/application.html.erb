@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+    <body>
+        <div id="sidebar">
+          <div id="logo">
+            <%= link_to root_path do %>
+                <%= image_tag "logo.png" %>
+            <% end %>
+          </div>
+        <ul>
+          <li class="category">Websites</li>
+          <li><%= link_to 'Blog' , root_path %></li>
+          <li>About</li>
+          <% if current_user %>
+              <li>
+                  <%= link_to 'Settings', edit_user_registration_path %>
+              </li>
+          <% end %>
+
+        </ul>
+        <ul>
+          <li class="category">Social</li>
+          <li><a href="https://github.com/goktuggoktas">Github</a></li>
+          <li><a href="https://bitbucket.com/goktuggoktas">Bitbucket</a></li>
+          <li><a href="https://twitter.com/goktugoktas">Twitter</a></li>
+        </ul>
+          <p class="sign_in">Admin login</p>
+    </div>
+        <div id="main_content">
+          <div id="header">
+            <p>All Posts
+                <% flash.each do |name,msg| %>
+                    <%= content_tag(:p, msg) %>
+                <% end  %>
+            </p>
+            <div class="buttons">
+              <% if current_user %>
+                  <%= link_to destroy_user_session_path , method: :delete do %>
+                        <button class="button">Log out</button>
+                  <% end %>
+                  <%= link_to new_post_path do %>
+                      <button class="button">New Post</button>
+                  <% end %>
+              <% else %>
+                  <%= link_to new_user_session_path do %>
+                      <button class="button">Sign In</button>
+                  <% end %>
+              <% end %>
+
+            </div>
+          </div>
+
+
+
+        <%= yield %>
+        </div>
+    </body>
+</html>
