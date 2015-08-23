@@ -1,11 +1,11 @@
-<div id="login_wrapper">
+<div id="login_wrapper" style="float: left;">
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
 
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email, autofocus: true %><br />
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -13,13 +13,23 @@
       <% end %>
 
       <div class="field">
+        <%= f.label :name%><br>
+        <%= f.text_field :name %><br />
+      </div>
+      <div class="field">
+        <%= f.label :surname %><br>
+        <%= f.text_field :surname %><br />
+      </div>
+</div>
+      <div id="login_wrapper" style=" float: right; padding-top: 7em;">
+      <div class="field">
         <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, autocomplete: "off" %><br />
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off" %><br />
       </div>
 
       <div class="field">
