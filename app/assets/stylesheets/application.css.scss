@@ -39,6 +39,12 @@ a {
 	background: #f5f7f9;
 	padding: 7em 0 0 0;
 	border-right: 1px solid #d6dce0;
+    .sidebar_circle {
+      margin-left: 48px;
+      border-radius: 20%;
+      width: 75px;
+      height: 75px;
+    }
 	#logo {
 
 		position: absolute;
@@ -47,8 +53,8 @@ a {
 	}
 	ul {
 		list-style: none;
-		text-align: right;
-		padding-right: 3em;
+		text-align: center;
+		padding-right: 2.5em;
 		.category {
 			font-weight: 700;
 			font-size: 0.7em;
@@ -111,6 +117,7 @@ a {
 		border-bottom: 1px solid #d6dce0;
 		background: #f5f7f9;
 		color: #9eafba;
+
 		p {
           margin-right: 120px;
           display: inline;
@@ -120,13 +127,14 @@ a {
 			color: #9eafba;
 			text-decoration: none;
 		}
+
 		.buttons {
 			float: right;
-			margin-top: -6px;
+            margin-top: -6px;
 			.button {
-				font-size: .8em;
-				margin-left: .5em;
-			}
+              font-size: .8em;
+              margin-left: .5em;
+            }
 		}
 	}
 	.post_wrapper {
@@ -299,7 +307,7 @@ a {
     margin: 2em 0;
   }
   input[type="text"], input[type="email"], input[type="password"], textarea {
-    width: 40%;
+    width: 30%;
     border: 1px solid #d6dce0;
     border-radius: .35em;
     margin-top: 10px;

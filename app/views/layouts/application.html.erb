@@ -13,16 +13,18 @@
                 <%= image_tag "logo.png" %>
             <% end %>
           </div>
-        <ul>
-          <li class="category">Websites</li>
-          <li><%= link_to 'Blog' , root_path %></li>
-          <li>About</li>
           <% if current_user %>
-              <li>
-                  <%= link_to 'Settings', edit_user_registration_path %>
-              </li>
+            <%= image_tag current_user.avatar.url(:medium), class: "sidebar_circle" %>
           <% end %>
-
+          <ul>
+              <li class="category">Websites</li>
+              <li><%= link_to 'Blog' , root_path %></li>
+              <li>About</li>
+              <% if current_user %>
+                  <li>
+                    <%= link_to 'Settings', edit_user_registration_path(@user) %>
+                  </li>
+              <% end %>
         </ul>
         <ul>
           <li class="category">Social</li>
@@ -39,6 +41,7 @@
                     <%= content_tag(:p, msg) %>
                 <% end  %>
             </p>
+
             <div class="buttons">
               <% if current_user %>
                   <%= link_to destroy_user_session_path , method: :delete do %>

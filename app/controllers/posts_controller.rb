@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   def edit
   end
 
+
   def update
       @post.update(post_params)
         redirect_to root_path
@@ -38,7 +39,7 @@ class PostsController < ApplicationController
   end
   private
     def post_params
-      params.require(:post).permit(:title, :body, :avatar)
+      params.require(:post).permit(:title, :body, :post_image)
     end
     def set_post
       @post = Post.find(params[:id])

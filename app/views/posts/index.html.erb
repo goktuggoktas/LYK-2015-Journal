@@ -3,7 +3,7 @@
   <h4 class="title"><strong><%= link_to post.title ,post%></strong></h4>
   <div style="padding: 15px 0px 0px 50px;">
     <div class="img-circle">
-        <%= image_tag post.avatar.url(:thumb) , class: "circle"%>
+        <%= image_tag post.post_image.url(:medium) , class: "circle"%>
     </div>
     <div class="body">
       <% if post.body.length > 250 %>
