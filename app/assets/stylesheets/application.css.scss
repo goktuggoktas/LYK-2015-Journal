@@ -40,8 +40,9 @@ a {
 	padding: 7em 0 0 0;
 	border-right: 1px solid #d6dce0;
     .sidebar_circle {
+      border: 1px solid #33acb7;
       margin-left: 48px;
-      border-radius: 20%;
+      border-radius: 25%;
       width: 75px;
       height: 75px;
     }
@@ -159,12 +160,12 @@ a {
         }
       }
       .title {
-        margin-left: 50px;
+        margin-left: 30px;
         a {
           font-weight: 500;
           text-decoration: none;
           color: #2a2f35;
-          font-size: 1.5em;
+          font-size: 1.2em;
           &:hover {
             color: #33acb7;
           }

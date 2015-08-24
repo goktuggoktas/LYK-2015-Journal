@@ -14,10 +14,12 @@
             <% end %>
           </div>
           <% if current_user %>
-            <%= image_tag current_user.avatar.url(:medium), class: "sidebar_circle" %>
+                <%= image_tag current_user.avatar.url(:medium), class: "sidebar_circle" %>
           <% end %>
           <ul>
-              <li class="category">Websites</li>
+            <% if current_user %>
+              <li class="category"><%= current_user.name %> <%= current_user.surname %></li>
+            <% end %>
               <li><%= link_to 'Blog' , root_path %></li>
               <li>About</li>
               <% if current_user %>
