@@ -1,8 +1,10 @@
 == README
 
+    This project was created to share the feelings of the participants lyk2015
+
 -- Version
 
-*Rails 4.2.3
+* Rails 4.2.3
 
 -- System Dependencies
 
