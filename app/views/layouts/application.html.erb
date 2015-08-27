@@ -20,19 +20,17 @@
             <% if current_user %>
               <li class="category"><%= current_user.name %> <%= current_user.surname %></li>
             <% end %>
-              <li><%= link_to 'Blog' , root_path %></li>
-              <li>About</li>
-              <% if current_user %>
+              <li><%= link_to 'Home' , root_path %></li>
+            <% if current_user %>
+              <li><%= link_to 'Profile', profile_path(current_user) %></li>
                   <li>
                     <%= link_to 'Settings', edit_user_registration_path(@user) %>
                   </li>
               <% end %>
         </ul>
         <ul>
-          <li class="category">Social</li>
-          <li><a href="https://github.com/goktuggoktas">Github</a></li>
-          <li><a href="https://bitbucket.com/goktuggoktas">Bitbucket</a></li>
-          <li><a href="https://twitter.com/goktugoktas">Twitter</a></li>
+          <li class="category">For Developers</li>
+          <li><a href="https://github.com/goktuggoktas/LYK-2015-Journal">Github</a></li>
         </ul>
           <p class="sign_in">Admin login</p>
     </div>

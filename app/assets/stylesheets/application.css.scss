@@ -41,10 +41,10 @@ a {
 	border-right: 1px solid #d6dce0;
     .sidebar_circle {
       border: 1px solid #33acb7;
-      margin-left: 48px;
-      border-radius: 25%;
-      width: 75px;
-      height: 75px;
+      margin-left: 58px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
     }
 	#logo {
 
@@ -139,7 +139,7 @@ a {
 		}
 	}
 	.post_wrapper {
-      padding: 1em;
+      padding: .5em 0 1.2em 1em;
       border-bottom: 1px solid #d6dce0;
       .img-circle{
         float: left;
@@ -173,7 +173,7 @@ a {
       }
       .body {
         width: 80%;
-        font-size: 15px;
+        font-size: 13px;
         line-height: 1.27;
       }
       .date_and_author {
