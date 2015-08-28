@@ -139,17 +139,35 @@ a {
 		}
 	}
 	.post_wrapper {
-      padding: .5em 0 1.2em 1em;
+      padding: .5em 0 1.5em 1em;
       border-bottom: 1px solid #d6dce0;
+      .poster_photo{
+        border-radius: 35%;
+        width: 35px;
+        height: 35px;
+        margin-left: -.8em;
+        margin-top: -.3em;
+
+      }
+      .top_poster{
+        width: 35%;
+        font-size: 12px;
+        margin-top: -2.5em;
+        margin-left: 2.1em;
+        margin-bottom: .2em;
+        border-bottom: 1px  solid #d6dce0;
+
+      }
       .img-circle{
         float: left;
+        margin-top: -2em;
         padding-right: 10px;
         margin-right:  30px;
       }
       .circle {
-        border-radius: 100%;
-        width: 100px;
-        height: 100px;
+        border-radius: 10%;
+        width: 75px;
+        height: 75px;
       }
       a {
         font-weight: 500;
@@ -160,7 +178,7 @@ a {
         }
       }
       .title {
-        margin-left: 30px;
+        margin-left: 160px;
         a {
           font-weight: 500;
           text-decoration: none;
@@ -173,18 +191,23 @@ a {
       }
       .body {
         width: 80%;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.27;
       }
       .date_and_author {
         color: #9eafba;
         margin: .5em 0 0 0;
+
       }
     }
 	#post_content {
-		padding: 1em 3em;
+		padding: 1em 5em;
       p {
         font-size: 10px;
+      }
+      .photo {
+        width: 300px;
+        height: 300px;
       }
 		.title {
 			font-weight: 500;
@@ -194,7 +217,7 @@ a {
 			margin-bottom: 0;
 		}
 		.body {
-          width: 80%;
+          width: 90%;
 			font-size: 15px;
 			line-height: 1.27;
 		}
@@ -308,7 +331,7 @@ a {
     margin: 2em 0;
   }
   input[type="text"], input[type="email"], input[type="password"], textarea {
-    width: 30%;
+    width: 40%;
     border: 1px solid #d6dce0;
     border-radius: .35em;
     margin-top: 10px;
@@ -335,9 +358,14 @@ a {
       color: #33acb7;
     }
   }
+
   .links {
     color: #33acb7;
     margin-left: 1em;
     line-height: 1.5em;
+  }
+  .photo {
+    width: 300px;
+    height: 300px;
   }
 }

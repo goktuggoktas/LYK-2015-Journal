@@ -1,6 +1,6 @@
 <% @user.posts.each do |post| %>
     <div class="post_wrapper">
-      <h4 class="title"><strong><%= link_to post.title ,post%></strong></h4>
+      <h4 class="title"><strong><%= link_to post.title.capitalize ,post%></strong></h4>
       <div style="padding: 0px 0px 0px 50px;">
         <div class="img-circle">
           <%= image_tag post.post_image.url(:medium) , class: "circle"%>
@@ -15,9 +15,6 @@
         </div>
       </div>
       <p class="date">
-        From:
-        <%= post.user.name.capitalize %>
-        <%= post.user.surname.capitalize %>&nbsp;&nbsp;&nbsp;&nbsp;
         <%= post.created_at.strftime(" %d, %B, %Y ") %>
       </p>
     </div>

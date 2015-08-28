@@ -9,6 +9,13 @@
               | <%= link_to 'Delete', post_path(@post) , method: :delete, data: {confirm: 'Are you sure?'} %>
               </p>
           <% end %>
+          <div style="float: left;">
+            <%= image_tag @post.post_image.url(:medium), class: "photo"%>
+          </div>
         <p class="body"><%= @post.body %></p>
-      From: <%= @post.user.name %> <%= @post.user.surname %>
+          From:
+          <%= link_to profile_path(@post.user) do %>
+              <%= @post.user.name.capitalize %>
+              <%= @post.user.surname.upcase %>
+          <% end %>
     </div>
