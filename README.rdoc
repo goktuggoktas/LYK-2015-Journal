@@ -1,28 +1,30 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    This project was created to share the feelings of the participants lyk2015
 
-Things you may want to cover:
+-- Version
 
-* Ruby version
+* Rails 4.2.3
 
-* System dependencies
+-- System Dependencies
 
-* Configuration
+* Cancancan
+* Devise
+* Paperclip
+* Rails admin
 
-* Database creation
+-- Contributing
 
-* Database initialization
+    Fork it ( https://github.com/[my-github-username]/LYK-2015-Journal/fork )
+    Create your feature branch (git checkout -b my-new-feature)
+    Commit your changes (git commit -am 'Add some feature')
+    Push to the branch (git push origin my-new-feature)
+    Create a new Pull Request
 
-* How to run the test suite
+-- Configure
 
-* Services (job queues, cache servers, search engines, etc.)
+  Open your terminal
+  
+    bundle install
+    rake db:migrate
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
