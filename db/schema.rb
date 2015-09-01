@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824160624) do
+ActiveRecord::Schema.define(version: 20150829191514) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20150824160624) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.boolean  "email_confirmed",        default: false
+    t.string   "confirm_token"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -145,15 +145,15 @@ a {
         border-radius: 35%;
         width: 35px;
         height: 35px;
-        margin-left: -.8em;
-        margin-top: -.3em;
+        margin-left: -.1em;
+        margin-top: -.01em;
 
       }
       .top_poster{
         width: 35%;
         font-size: 12px;
-        margin-top: -2.5em;
-        margin-left: 2.1em;
+        margin-top: -2em;
+        margin-left: 3.1em;
         margin-bottom: .2em;
         border-bottom: 1px  solid #d6dce0;
 
@@ -303,20 +303,20 @@ a {
 		border-radius: .35em;
 		margin-top: 10px;
 		padding: .5em 1em;
-		line-height: 1.75;
+		line-height: 1.3em;
 	}
 	input[type="text"] {
-		height: 35px;
+		height: 20px;
 	}
 	textarea {
-		min-height: 180px;
+		min-height: 150px;
 	}
 	input[type="submit"] {
 		outline: none;
 		background: transparent;
 		border: 1px solid #d6dce0;
 		padding: .5em 1.5em;
-		font-size: 1.1em;
+		font-size: .8em;
 		border-radius: 1.5em;
 		margin-left: .5em;
 		&:hover {
@@ -331,7 +331,7 @@ a {
     margin: 2em 0;
   }
   input[type="text"], input[type="email"], input[type="password"], textarea {
-    width: 40%;
+    width: 30%;
     border: 1px solid #d6dce0;
     border-radius: .35em;
     margin-top: 10px;
